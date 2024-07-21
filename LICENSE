@@ -1,0 +1,23 @@
+Custom License for jphp-steam-auth
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, subject to the following conditions:
+
+1. Attribution Requirement:
+   Any use of the Software in a published form, including but not limited to videos on YouTube, must include proper attribution to the original author. The attribution must be visible and clearly state the author's name Demonck and the source https://github.com/DEMoN881/jphp-steam-auth.
+
+2. Specific Restriction for YouTube Channel "НЕДОХАКЕРЫ Lite":
+   The YouTube channel "НЕДОХАКЕРЫ Lite" is required to provide attribution in a prominent location within the video description and on-screen during the use of the Software. Failure to comply will result in the revocation of the license for this specific channel.
+
+3. This license shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.

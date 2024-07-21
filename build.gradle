@@ -1,0 +1,80 @@
+apply plugin: "java"
+apply plugin: "idea"
+apply plugin: "eclipse"
+
+version '1.0.0'
+
+compileJava {
+    sourceCompatibility = '1.8'
+    targetCompatibility = '1.8'
+}
+
+sourceSets {
+    main.java.srcDirs = ['src-jvm/main/java']
+    main.resources.srcDirs = ['src-jvm/main/resources']
+}
+
+repositories {
+  mavenLocal()
+  mavenCentral()
+  jcenter()
+  maven { url 'https://oss.sonatype.org/content/groups/public' }
+}
+
+configurations { provided }
+
+sourceSets { main { compileClasspath += configurations.provided } }
+
+dependencies {
+  provided files('jars/x-annotations-13.0.jar')
+  provided files('jars/x-aopalliance-1.0.jar')
+  provided files('jars/x-commons-codec-1.4.jar')
+  provided files('jars/x-commons-logging-1.1.1.jar')
+  provided files('jars/x-guice-2.0.jar')
+  provided files('jars/x-httpclient-4.1.jar')
+  provided files('jars/x-httpcore-4.1.jar')
+  provided files('jars/x-javalin-4.0.0.ALPHA0.jar')
+  provided files('jars/x-javax.servlet-api-3.1.0.jar')
+  provided files('jars/x-jetty-client-9.4.36.v20210114.jar')
+  provided files('jars/x-jetty-http-9.4.36.v20210114.jar')
+  provided files('jars/x-jetty-io-9.4.36.v20210114.jar')
+  provided files('jars/x-jetty-security-9.4.36.v20210114.jar')
+  provided files('jars/x-jetty-server-9.4.36.v20210114.jar')
+  provided files('jars/x-jetty-servlet-9.4.36.v20210114.jar')
+  provided files('jars/x-jetty-util-9.4.36.v20210114.jar')
+  provided files('jars/x-jetty-util-ajax-9.4.36.v20210114.jar')
+  provided files('jars/x-jetty-webapp-9.4.36.v20210114.jar')
+  provided files('jars/x-jetty-xml-9.4.36.v20210114.jar')
+  provided files('jars/x-jphp-steam-auth-1.0.0.jar')
+  provided files('jars/x-kotlin-stdlib-1.4.30.jar')
+  provided files('jars/x-kotlin-stdlib-common-1.4.30.jar')
+  provided files('jars/x-kotlin-stdlib-jdk7-1.4.30.jar')
+  provided files('jars/x-kotlin-stdlib-jdk8-1.4.30.jar')
+  provided files('jars/x-nekohtml-1.9.10.jar')
+  provided files('jars/x-openid4java-0.9.8.jar')
+  provided files('jars/x-slf4j-api-2.0.10.jar')
+  provided files('jars/x-slf4j-simple-2.0.10.jar')
+  provided files('jars/x-websocket-api-9.4.36.v20210114.jar')
+  provided files('jars/x-websocket-client-9.4.36.v20210114.jar')
+  provided files('jars/x-websocket-common-9.4.36.v20210114.jar')
+  provided files('jars/x-websocket-server-9.4.36.v20210114.jar')
+  provided files('jars/x-websocket-servlet-9.4.36.v20210114.jar')
+  provided files('jars/x-xercesImpl-2.8.1.jar')
+  provided files('jars/x-xml-apis-1.3.03.jar')
+  provided files('vendor/jphp-runtime/jars/jphp-runtime-1.0.3.jar')
+
+  compile 'io.javalin:javalin:4.0.0.ALPHA0'
+  compile 'org.slf4j:slf4j-simple:2.0.10'
+  compile 'org.openid4java:openid4java:0.9.8'
+}
+
+jar {
+   destinationDir = file('jars/')
+   baseName = 'x-jphp-steam-auth'
+}
+
+task copyJars(type: Copy) {
+  from project.configurations.compile
+  into file(projectDir.path + '/jars/')
+  rename { name -> 'x-' + name }
+}

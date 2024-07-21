@@ -1,0 +1,14 @@
+dependencies:
+  jphp-runtime:
+    version: 1.3.1
+    info: [
+      ]
+  jphp-core:
+    version: 1.3.1
+    info: [
+      ]
+  dn-bundle-plugin:
+    version: 1.0.2
+    info:
+      size: 4096
+      repo: http://77.232.130.238:8181
